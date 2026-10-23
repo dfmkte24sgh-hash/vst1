@@ -1,0 +1,25 @@
+COMPOSITOR MIDI LIVRE  -  plugin VST3 (gerador de MIDI)
+
+WINDOWS
+  1. Copie a pasta "Compositor MIDI Livre.vst3" para:
+        C:\Program Files\Common Files\VST3
+  2. REAPER > Preferences > Plug-ins > VST > "Re-scan..." (ou "Clear cache / re-scan").
+
+MACOS
+  1. Copie "Compositor MIDI Livre.vst3" para:  /Library/Audio/Plug-Ins/VST3
+     (ou ~/Library/Audio/Plug-Ins/VST3)
+  2. Abra o Terminal e rode (o plugin nao e assinado pela Apple):
+        xattr -dr com.apple.quarantine "/Library/Audio/Plug-Ins/VST3/Compositor MIDI Livre.vst3"
+  3. REAPER > Preferences > Plug-ins > VST > Re-scan.
+
+LINUX
+  Copie para ~/.vst3 e faca o re-scan no REAPER.
+
+USO NO REAPER
+  1. Crie uma faixa. Em FX, adicione "VST3i: Compositor MIDI Livre".
+  2. Logo depois dele, na mesma faixa, adicione o seu instrumento (VSTi). O MIDI gerado vai para ele.
+  3. Aperte play. A musica toca sincronizada ao projeto e repete em loop.
+  4. Para um sintetizador por instrumento: cada instrumento sai num canal MIDI proprio. Crie faixas
+     com envio de MIDI (send) filtrando o canal, ou arraste o .mid de cada pista (botao "MID") para
+     novas faixas.
+  5. Para gravar o MIDI como itens editaveis: arraste o .mid (canto "ARRASTE O MIDI") para o arranjo.
